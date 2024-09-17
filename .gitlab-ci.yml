@@ -1,0 +1,29 @@
+stages:
+    - build
+    - tests
+    - preprod
+    - deploy
+
+build:
+    stage: build
+    script: echo "Build est ok"
+    only:
+        - main
+
+test:
+    stage: tests
+    script: echo "Test est ok"
+    only:
+        - main
+
+deploy:
+    stage: preprod
+    script: echo "Préproduction est ok"
+    only:
+        - main
+
+deploy:
+    stage: deploy
+    script: echo "Deploy est ok"
+    only:
+        - main
